@@ -33,3 +33,5 @@ When you make an API request, you're essentially asking a remote server or servi
 8. **Parsing the Response**: After receiving the response, your application needs to parse it to extract the relevant information. This is where you extract the data you need from the JSON or XML response.
 
 In summary, making an API request involves specifying the API endpoint, choosing the appropriate HTTP method, including any necessary parameters or payload, adding headers (if required), and handling the response once it's returned.
+
+---
