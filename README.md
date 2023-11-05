@@ -88,3 +88,38 @@ else:
 ```
 
 In this example, we're making a POST request to create a new post on the JSONPlaceholder API. We provide the URL and the data we want to send as a JSON payload.
+
+### Making PUT and DELETE Requests:
+
+```python
+import requests
+
+# Define the URL and updated data
+url = 'https://jsonplaceholder.typicode.com/posts/1'
+data = {
+    'title': 'updated title',
+    'body': 'updated body',
+}
+
+# Make a PUT request to update the resource
+response = requests.put(url, json=data)
+
+# Check if the request was successful (HTTP status code 200 for OK)
+if response.status_code == 200:
+    print(f'Success! Post updated: {response.json()}')
+else:
+    print(f'Error: {response.status_code}')
+
+# Make a DELETE request to delete the resource
+response = requests.delete(url)
+
+# Check if the request was successful (HTTP status code 200 for OK)
+if response.status_code == 200:
+    print('Success! Post deleted.')
+else:
+    print(f'Error: {response.status_code}')
+```
+
+In the above example, we're making a PUT request to update a specific post and a DELETE request to delete the same post.
+
+These are basic examples to get you started with making HTTP requests and interacting with RESTful APIs in Python. Depending on the API you're working with, you may need to handle authentication, headers, pagination, and other features specific to that API.
