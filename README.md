@@ -1,6 +1,6 @@
 # Python_DevOps_API
 
-#
+
 API stands for Application Programming Interface. It's a set of rules and protocols that allows different software applications to communicate and interact with each other. APIs are used to enable the exchange of data and functionality between different systems, which can be running on different servers, devices, or platforms.
 
 When you make an API request, you're essentially asking a remote server or service to perform a specific action or provide you with specific data. Here's a breakdown of the components and process of an API request:
