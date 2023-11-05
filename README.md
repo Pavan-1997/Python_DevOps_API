@@ -63,3 +63,28 @@ else:
 ```
 
 In this example, we're making a GET request to retrieve a specific post from the JSONPlaceholder API. We then check if the request was successful (status code 200) and print the response content.
+
+### Making POST Requests:
+
+```python
+import requests
+
+# Define the URL and payload data
+url = 'https://jsonplaceholder.typicode.com/posts'
+data = {
+    'title': 'foo',
+    'body': 'bar',
+    'userId': 1
+}
+
+# Make a POST request with the data
+response = requests.post(url, json=data)
+
+# Check if the request was successful (HTTP status code 201 for created)
+if response.status_code == 201:
+    print(f'Success! New post created with ID {response.json()["id"]}')
+else:
+    print(f'Error: {response.status_code}')
+```
+
+In this example, we're making a POST request to create a new post on the JSONPlaceholder API. We provide the URL and the data we want to send as a JSON payload.
