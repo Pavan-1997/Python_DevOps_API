@@ -35,3 +35,31 @@ When you make an API request, you're essentially asking a remote server or servi
 In summary, making an API request involves specifying the API endpoint, choosing the appropriate HTTP method, including any necessary parameters or payload, adding headers (if required), and handling the response once it's returned.
 
 ---
+Making HTTP requests and interacting with RESTful APIs in Python involves using libraries like `requests` or `http.client` to send HTTP requests to a server, and then processing the responses. 
+
+Here, I'll provide examples using the `requests` library, which is a popular choice for making HTTP requests in Python.
+
+### Installing the requests library:
+
+```bash
+pip install requests
+```
+
+### Making GET Requests:
+
+```python
+import requests
+
+# Make a GET request to a URL
+response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+
+# Check if the request was successful (HTTP status code 200)
+if response.status_code == 200:
+    # Print the response content
+    print(response.json())
+else:
+    # Print an error message if the request was not successful
+    print(f'Error: {response.status_code}')
+```
+
+In this example, we're making a GET request to retrieve a specific post from the JSONPlaceholder API. We then check if the request was successful (status code 200) and print the response content.
